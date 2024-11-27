@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <UserSecretsId>DataWers-Console-759c60c0-7edb-4557-a198-9c15a8b74a67</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Logical_old\**" />
+    <Compile Remove="Physical_old\**" />
+    <EmbeddedResource Remove="Logical_old\**" />
+    <EmbeddedResource Remove="Physical_old\**" />
+    <None Remove="Logical_old\**" />
+    <None Remove="Physical_old\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.408" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="9.0.0" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.1" />
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\Caching\Prequel.Engine.Caching.Azure\Prequel.Engine.Caching.Azure.csproj" />
+    <ProjectReference Include="..\..\Engine\Caching\Prequel.Engine.Caching.File\Prequel.Engine.Caching.File.csproj" />
+    <ProjectReference Include="..\..\Engine\Caching\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.MsSql\Prequel.Engine.Source.MsSql.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Csv\Prequel.Engine.Source.Csv.csproj" />
+    <ProjectReference Include="..\..\Model\Prequel.Model.Execution\Prequel.Model.Execution.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="db_cities.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="db_primary.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="db_colors.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="db_departments.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="db_employees.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="db_no_headers.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>

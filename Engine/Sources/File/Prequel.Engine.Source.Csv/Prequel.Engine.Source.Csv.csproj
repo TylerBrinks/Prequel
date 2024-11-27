@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Sep" Version="0.5.5" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <InternalsVisibleTo Include="Prequel.Tests" />
+  </ItemGroup>
+	
+  <ItemGroup>
+    <ProjectReference Include="..\Prequel.Engine.Source.File\Prequel.Engine.Source.File.csproj" />
+  </ItemGroup>
+
+</Project>

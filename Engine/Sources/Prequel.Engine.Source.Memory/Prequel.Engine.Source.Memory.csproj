@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Linq.Async" Version="6.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\IO\Prequel.Engine.IO\Prequel.Engine.IO.csproj" />
+    <ProjectReference Include="..\..\Prequel.Engine.Core\Prequel.Engine.Core.csproj" />
+  </ItemGroup>
+
+</Project>

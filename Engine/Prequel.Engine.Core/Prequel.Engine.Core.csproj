@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+	  <None Remove="Prequel.Core.csproj.DotSettings" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Prequel.Tests" />
+		<InternalsVisibleTo Include="Prequel.Execution" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+		<PackageReference Include="SqlParserCS" Version="0.5.7" />
+	</ItemGroup>
+
+</Project>

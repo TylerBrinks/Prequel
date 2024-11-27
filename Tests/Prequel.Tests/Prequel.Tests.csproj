@@ -1,0 +1,74 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="9.0.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="Sep" Version="0.5.5" />
+    <PackageReference Include="xunit" Version="2.9.2" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.8.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+    <PackageReference Include="coverlet.collector" Version="6.0.2">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\Caching\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj" />
+    <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO.Azure\Prequel.Engine.IO.Azure.csproj" />
+    <ProjectReference Include="..\..\Engine\Prequel.Engine.Core\Prequel.Engine.Core.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.Database\Prequel.Engine.Source.Database.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.MsSql\Prequel.Engine.Source.MsSql.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Avro\Prequel.Engine.Source.Avro.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Csv\Prequel.Engine.Source.Csv.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Json\Prequel.Engine.Source.Json.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Parquet\Prequel.Engine.Source.Parquet.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Prequel.Engine.Source.Execution\Prequel.Engine.Source.Execution.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Prequel.Engine.Source.Memory\Prequel.Engine.Source.Memory.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Integration\db_countries.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\db_departments.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\db_employees.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\db_jobs.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\db_json.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\db_locations.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\test.avro">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\test.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\test.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="Integration\userdata1.parquet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
