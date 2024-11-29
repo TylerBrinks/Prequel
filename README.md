@@ -26,7 +26,7 @@ Open the source code in your IDE of choice.  Set the Prequel.Console as the star
 ---
 
 ## What is a Query Engine?
-A query engine is software that interprets a query (Structured Query Language) and interacts with a data source to manipulate the underlying data.  Take a look at [the full project overview](/Docs/index.md) for details on how every part of a query engine works.
+A query engine is software that interprets a query (Structured Query Language) and interacts with a data source to manipulate the underlying data.  Take a look at [the full project overview](/docs/index.md) for details on how every part of a query engine works.
 
 
 ## Main Features
