@@ -1,11 +1,9 @@
 ﻿using Moq;
 using Prequel.Tests.Fakes;
 using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.Source.File;
-using Prequel.Engine.Core.Data;
 using Prequel.Engine.IO;
-using Prequel.Engine.Caching;
 
 namespace Prequel.Tests.IO
 {

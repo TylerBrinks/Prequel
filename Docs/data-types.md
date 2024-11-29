@@ -61,7 +61,7 @@ public enum IntegerDataType
 ```
 
 ## Type Inference
-Types in Prequel can be inferred for data sources that do not contain field metadata.  In order to infer data type, the reads a range of records (rows) and runs each value through a series of regular expressions and string parsing tests.  The type inference falls back to a UTF8 string type if none of the tests identify a valid data type.  See the [InferredDataType.cs](../Engine/Prequel.Engine.Core/Data/InferredDataType.cs) implementation.
+Types in Prequel can be inferred for data sources that do not contain field metadata.  In order to infer data type, the reads a range of records (rows) and runs each value through a series of regular expressions and string parsing tests.  The type inference falls back to a UTF8 string type if none of the tests identify a valid data type.  See the [InferredDataType.cs](../Engine/Prequel.Engine/Data/InferredDataType.cs) implementation.
 
 ```c#
 public void Update(string? value, Regex? datetimeRegex = null)

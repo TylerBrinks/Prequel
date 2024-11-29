@@ -1,7 +1,7 @@
-using Prequel.Engine.Core.Physical.Aggregation;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Physical;
-using Prequel.Engine.Core.Values;
+using Prequel.Physical.Aggregation;
+using Prequel.Data;
+using Prequel.Physical;
+using Prequel.Values;
 
 namespace Prequel.Tests;
 

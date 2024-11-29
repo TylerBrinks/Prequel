@@ -1,6 +1,6 @@
 # Query Planning
 
-Queries in Prequel are build and executed using an [ExecutionContext class](../Engine/Prequel.Engine.Core/Execution/ExecutionContext.cs).  This class is responsible for building both [logical](logical-plans.md) and [physical](physical-plans.md) execution plans.
+Queries in Prequel are build and executed using an [ExecutionContext class](../Engine/Prequel.Engine/Execution/ExecutionContext.cs).  This class is responsible for building both [logical](logical-plans.md) and [physical](physical-plans.md) execution plans.
 
 ## Building Logical Plans
 Before a logical plan can be composed, the user's query must be parsed.  Parsing SQL queries is a complex topic on its own, and beyond the scope of this tutorial.  This project uses the SqlParser C# library to parse SQL queries into an abstract syntax tree.  Once the query has been parsed into its individual components, a logical plan can be composed.

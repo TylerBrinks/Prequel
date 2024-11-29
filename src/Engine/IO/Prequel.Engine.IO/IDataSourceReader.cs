@@ -1,4 +1,4 @@
-﻿using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
 
 namespace Prequel.Engine.IO;
 

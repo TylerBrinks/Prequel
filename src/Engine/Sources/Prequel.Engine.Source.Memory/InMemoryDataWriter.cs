@@ -1,5 +1,5 @@
-﻿using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Metrics;
+﻿using Prequel.Data;
+using Prequel.Metrics;
 using Prequel.Engine.IO;
 
 namespace Prequel.Engine.Source.Memory;

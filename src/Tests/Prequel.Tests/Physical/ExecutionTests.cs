@@ -1,11 +1,11 @@
 ﻿using Prequel.Tests.Fakes;
 using SqlParser.Ast;
-using Schema = Prequel.Engine.Core.Data.Schema;
-using Exec = Prequel.Engine.Core.Execution.ExecutionContext;
-using Prequel.Engine.Core.Logical.Values;
-using Prequel.Engine.Core.Physical.Expressions;
-using Prequel.Engine.Core.Execution;
-using Prequel.Engine.Core.Data;
+using Schema = Prequel.Data.Schema;
+using Exec = Prequel.Execution.ExecutionContext;
+using Prequel.Logical.Values;
+using Prequel.Physical.Expressions;
+using Prequel.Execution;
+using Prequel.Data;
 
 namespace Prequel.Tests.Physical;
 

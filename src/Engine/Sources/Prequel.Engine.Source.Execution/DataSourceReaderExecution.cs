@@ -1,6 +1,6 @@
-﻿using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Execution;
-using Prequel.Engine.Core.Metrics;
+﻿using Prequel.Data;
+using Prequel.Execution;
+using Prequel.Metrics;
 using Prequel.Engine.IO;
 using System.Runtime.CompilerServices;
 

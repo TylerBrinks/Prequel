@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Execution;
+using Prequel.Data;
+using Prequel.Execution;
 
 namespace Prequel.Tests;
 

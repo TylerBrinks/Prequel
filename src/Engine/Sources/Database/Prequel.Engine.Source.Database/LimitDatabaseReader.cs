@@ -1,5 +1,5 @@
 ﻿using System.Data.Common;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 
 namespace Prequel.Engine.Source.Database;
 

@@ -1,7 +1,7 @@
 ﻿using Prequel.Engine.IO;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.Source.Parquet;
-using Exec = Prequel.Engine.Core.Execution.ExecutionContext;
+using Exec = Prequel.Execution.ExecutionContext;
 
 namespace Prequel.Tests.Integration;
 

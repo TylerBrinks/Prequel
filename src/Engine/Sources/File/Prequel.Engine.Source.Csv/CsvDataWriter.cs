@@ -1,6 +1,6 @@
 ﻿using System.Globalization;
 using nietras.SeparatedValues;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.IO;
 
 namespace Prequel.Engine.Source.Csv;

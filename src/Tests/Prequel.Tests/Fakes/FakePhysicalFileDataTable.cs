@@ -1,20 +1,21 @@
-﻿using Prequel.Tests.Fakes;
 using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Execution;
+using Prequel.Data;
+using Prequel.Execution;
 using Prequel.Engine.Source.File;
+
+namespace Prequel.Tests.Fakes;
 
 public class FakePhysicalFileDataTable : PhysicalFileDataTable
 {
     public FakePhysicalFileDataTable(
-        string tableName, 
-        QueryContext queryContext,
+        string tableName,
+        QueryContext _,
         CacheOptions? cacheOptions = null
-        ) : base(tableName, cacheOptions ?? new())
+    ) : base(tableName, cacheOptions ?? new())
     {
     }
 
-    public override Schema? Schema => new ([new("field1", ColumnDataType.Integer)]);
+    public override Schema? Schema => new([new("field1", ColumnDataType.Integer)]);
 
     public override IExecutionPlan Scan(List<int> projection)
     {

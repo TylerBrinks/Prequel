@@ -1,4 +1,4 @@
-﻿using Prequel.Engine.Core.Logical.Values;
+﻿using Prequel.Logical.Values;
 
 namespace Prequel.Tests.Data
 {

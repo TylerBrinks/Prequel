@@ -1,5 +1,5 @@
-﻿using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical;
+﻿using Prequel.Data;
+using Prequel.Logical;
 
 namespace Prequel.Model.Execution;
 

@@ -1,7 +1,6 @@
-﻿using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
 using Prequel.Engine.Source.Database;
 using Prequel.Engine.Source.MsSql;
-using Prequel.Engine.Core.Data;
 
 namespace Prequel.Tests.Database;
 

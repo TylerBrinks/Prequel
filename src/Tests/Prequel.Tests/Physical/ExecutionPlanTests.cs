@@ -1,14 +1,13 @@
 ﻿using SqlParser.Ast;
 using Prequel.Tests.Data;
-using Schema = Prequel.Engine.Core.Data.Schema;
-using Exec = Prequel.Engine.Core.Execution.ExecutionContext;
 using Prequel.Tests.Fakes;
-using Prequel.Engine.Core.Logical.Plans;
-using Prequel.Engine.Core.Physical;
-using Prequel.Engine.Core.Physical.Expressions;
-using Prequel.Engine.Core;
-using Prequel.Engine.Core.Execution;
-using Prequel.Engine.Core.Data;
+using Prequel.Logical.Plans;
+using Prequel.Physical;
+using Prequel.Physical.Expressions;
+using Prequel.Execution;
+using Prequel.Data;
+using Schema = Prequel.Data.Schema;
+using Exec = Prequel.Execution.ExecutionContext;
 
 namespace Prequel.Tests.Physical;
 

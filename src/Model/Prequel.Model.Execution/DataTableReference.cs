@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Model.Execution.Database;
 
 namespace Prequel.Model.Execution;

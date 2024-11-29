@@ -16,7 +16,7 @@
 	
   <ItemGroup>
     <ProjectReference Include="..\..\..\Caching\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj" />
-    <ProjectReference Include="..\..\..\Prequel.Engine.Core\Prequel.Engine.Core.csproj" />
+    <ProjectReference Include="..\..\..\Prequel\Prequel.csproj" />
     <ProjectReference Include="..\Prequel.Engine.Source.File\Prequel.Engine.Source.File.csproj" />
   </ItemGroup>
 

@@ -1,10 +1,7 @@
-﻿using Prequel.Core.Data;
-using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
+﻿using Prequel.Engine.Caching;
+using Prequel.Data;
 using Moq;
-using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Execution;
+using Prequel.Execution;
 using Prequel.Engine.IO;
 
 namespace Prequel.Tests.Caching

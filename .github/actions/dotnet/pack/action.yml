@@ -18,11 +18,11 @@ runs:
   steps:
     - name: Pack pre-release version ${{steps.version.outputs.nuGetVersionV2}}
       shell: bash
-      run: dotnet pack ./Engine/Prequel.Engine.Core/Prequel.Engine.Core.csproj --configuration ${{ inputs.dotnet-build-configuration }} --verbosity normal --no-restore -p:PackageVersion=${{ inputs.pre-release-version }} --output ./packages/preview
+      run: dotnet pack ./Engine/Prequel/Prequel.csproj --configuration ${{ inputs.dotnet-build-configuration }} --verbosity normal --no-restore -p:PackageVersion=${{ inputs.pre-release-version }} --output ./packages/preview
 
     - name: Pack release version ${{steps.version.outputs.majorMinorPatch}}
       shell: bash
-      run: dotnet pack ./Engine/Prequel.Engine.Core/Prequel.Engine.Core.csproj --configuration ${{ inputs.dotnet-build-configuration }} --verbosity normal --no-restore -p:PackageVersion=${{ inputs.release-version }} --output ./packages/release
+      run: dotnet pack ./Engine/Prequel/Prequel.csproj --configuration ${{ inputs.dotnet-build-configuration }} --verbosity normal --no-restore -p:PackageVersion=${{ inputs.release-version }} --output ./packages/release
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v3

@@ -1,8 +1,8 @@
 ﻿using System.Globalization;
 using System.Runtime.CompilerServices;
 using nietras.SeparatedValues;
-using Prequel.Engine.Core.Metrics;
-using Prequel.Engine.Core.Data;
+using Prequel.Metrics;
+using Prequel.Data;
 using Prequel.Engine.IO;
 
 namespace Prequel.Engine.Source.Csv;

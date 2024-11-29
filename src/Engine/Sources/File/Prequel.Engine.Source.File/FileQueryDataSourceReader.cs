@@ -1,6 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Metrics;
+using Prequel.Data;
+using Prequel.Metrics;
 using Prequel.Engine.IO;
 
 namespace Prequel.Engine.Source.File;
@@ -9,7 +9,7 @@ public class FileQueryDataSourceReader : ISchemaDataSourceReader
 {
     protected readonly string Name;
     protected readonly string Query;
-    protected readonly Core.Execution.ExecutionContext Context = new();
+    protected readonly Execution.ExecutionContext Context = new();
 
     public FileQueryDataSourceReader(string name, string query, PhysicalFileDataTable dataTable)
     {

@@ -1,6 +1,6 @@
 ﻿using Prequel.Engine.Source.Memory;
-using Prequel.Engine.Core.Data;
-using ExecutionContext = Prequel.Engine.Core.Execution.ExecutionContext;
+using Prequel.Data;
+using ExecutionContext = Prequel.Execution.ExecutionContext;
 
 namespace Prequel.Model.Execution;
 

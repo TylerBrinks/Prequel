@@ -3,9 +3,7 @@ using Prequel.Engine.Caching;
 using Moq;
 using Prequel.Tests.Fakes;
 using Prequel.Engine.Source.Execution;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Source.Execution;
+using Prequel.Data;
 
 namespace Prequel.Tests.Physical;
 

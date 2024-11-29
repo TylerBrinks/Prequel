@@ -1,7 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Metrics;
+using Prequel.Data;
+using Prequel.Metrics;
 using Prequel.Engine.IO;
 using Prequel.Engine.Source.File;
 

@@ -1,10 +1,9 @@
 ﻿using System.Runtime.InteropServices;
 using ParquetSharp;
-using Prequel.Engine.Core;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.IO;
 using Column = ParquetSharp.Column;
-using RecordBatch = Prequel.Engine.Core.Data.RecordBatch;
+using RecordBatch = Prequel.Data.RecordBatch;
 
 namespace Prequel.Engine.Source.Parquet;
 

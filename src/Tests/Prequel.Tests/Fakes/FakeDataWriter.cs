@@ -1,4 +1,4 @@
-﻿using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
 using Prequel.Engine.IO;
 
 namespace Prequel.Tests.Fakes;

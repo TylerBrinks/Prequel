@@ -1,11 +1,11 @@
 ﻿using SqlParser.Ast;
 using SqlParser;
 using static SqlParser.Ast.Expression;
-using Wildcard = Prequel.Engine.Core.Logical.Expressions.Wildcard;
-using Prequel.Engine.Core.Logical.Expressions;
-using Prequel.Engine.Core.Logical.Values;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical;
+using Wildcard = Prequel.Logical.Expressions.Wildcard;
+using Prequel.Logical.Expressions;
+using Prequel.Logical.Values;
+using Prequel.Data;
+using Prequel.Logical;
 // ReSharper disable IdentifierTypo
 
 namespace Prequel.Tests.Logical;
@@ -116,7 +116,7 @@ public class LogicalExtensionsTests
         var literal = new Literal(new IntegerScalar(1));
         var alias = new Alias(column, "alias");
         var fn = new AggregateFunction(AggregateFunctionType.Min, [column, alias], false);
-        var orderBy = new Prequel.Engine.Core.Logical.Expressions.OrderBy(column, false);
+        var orderBy = new Prequel.Logical.Expressions.OrderBy(column, false);
 
         var columnClone = column.CloneWithReplacement(_ => null);
         Assert.IsType<Column>(columnClone);

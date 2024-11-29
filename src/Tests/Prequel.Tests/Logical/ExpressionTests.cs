@@ -1,9 +1,7 @@
-﻿using Prequel.Engine.Core.Logical;
-using Prequel.Engine.Core.Logical.Expressions;
-using Prequel.Engine.Core.Logical.Values;
-using Prequel.Engine.Core;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical.Expressions;
+﻿using Prequel.Logical;
+using Prequel.Logical.Expressions;
+using Prequel.Logical.Values;
+using Prequel.Data;
 using SqlParser.Ast;
 
 namespace Prequel.Tests.Logical;
@@ -69,11 +67,11 @@ public class ExpressionTests
     [Fact]
     public void OrderBy_Overrides_ToString()
     {
-        var order = new Engine.Core.Logical.Expressions.OrderBy(new Column("column"), false);
+        var order = new Prequel.Logical.Expressions.OrderBy(new Column("column"), false);
 
         Assert.Equal("Order By column Desc", order.ToString());
 
-        order = new Engine.Core.Logical.Expressions.OrderBy(new Column("column"),true);
+        order = new Prequel.Logical.Expressions.OrderBy(new Column("column"),true);
 
         Assert.Equal("Order By column Asc", order.ToString());
     }

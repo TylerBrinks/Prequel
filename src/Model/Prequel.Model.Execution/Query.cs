@@ -1,8 +1,8 @@
 ﻿using SqlParser.Ast;
-using ExecutionContext = Prequel.Engine.Core.Execution.ExecutionContext;
-using Prequel.Engine.Core.Logical.Plans;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical;
+using ExecutionContext = Prequel.Execution.ExecutionContext;
+using Prequel.Logical.Plans;
+using Prequel.Data;
+using Prequel.Logical;
 
 namespace Prequel.Model.Execution;
 

@@ -1,4 +1,4 @@
-﻿using Prequel.Engine.Core.Logical.Rules;
+﻿using Prequel.Logical.Rules;
 
 namespace Prequel.Tests.Logical
 {

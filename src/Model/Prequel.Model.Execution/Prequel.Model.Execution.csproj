@@ -12,7 +12,7 @@
     <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO.Aws\Prequel.Engine.IO.Aws.csproj" />
     <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO.Azure\Prequel.Engine.IO.Azure.csproj" />
     <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO\Prequel.Engine.IO.csproj" />
-    <ProjectReference Include="..\..\Engine\Prequel.Engine.Core\Prequel.Engine.Core.csproj" />
+    <ProjectReference Include="..\..\Engine\Prequel\Prequel.csproj" />
     <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.Database\Prequel.Engine.Source.Database.csproj" />
     <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.MsSql\Prequel.Engine.Source.MsSql.csproj" />
     <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Avro\Prequel.Engine.Source.Avro.csproj" />

@@ -1,5 +1,4 @@
 ﻿using Prequel.Engine.Source.Database;
-using Prequel.Engine.Source.Database;
 using Snowflake.Data.Client;
 
 namespace Prequel.Model.Execution.Database;

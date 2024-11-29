@@ -12,7 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\IO\Prequel.Engine.IO\Prequel.Engine.IO.csproj" />
-    <ProjectReference Include="..\..\Prequel.Engine.Core\Prequel.Engine.Core.csproj" />
+    <ProjectReference Include="..\..\Prequel\Prequel.csproj" />
   </ItemGroup>
 
 </Project>

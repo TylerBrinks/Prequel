@@ -1,7 +1,6 @@
-﻿using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical;
-using Prequel.Engine.Core.Logical.Expressions;
-using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
+using Prequel.Logical;
+using Prequel.Logical.Expressions;
 
 namespace Prequel.Tests.Data;
 

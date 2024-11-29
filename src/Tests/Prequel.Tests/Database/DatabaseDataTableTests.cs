@@ -1,9 +1,7 @@
 ﻿using Prequel.Engine.Caching;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.Source.Execution;
 using Prequel.Tests.Fakes;
-using Prequel.Engine.Caching;
-using Prequel.Engine.Source.Execution;
 
 namespace Prequel.Tests.Database;
 

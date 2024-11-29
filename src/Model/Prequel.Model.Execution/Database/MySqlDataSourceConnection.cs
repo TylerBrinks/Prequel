@@ -1,6 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using Prequel.Engine.Source.Database;
-using Prequel.Engine.Source.Database;
 
 namespace Prequel.Model.Execution.Database;
 

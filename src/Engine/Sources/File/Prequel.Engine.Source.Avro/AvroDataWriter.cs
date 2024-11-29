@@ -1,5 +1,5 @@
 ﻿using System.Text.Json;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.IO;
 using SolTechnology.Avro;
 

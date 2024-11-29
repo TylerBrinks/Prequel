@@ -1,16 +1,15 @@
 ﻿using SqlParser.Ast;
-using Aggregate = Prequel.Engine.Core.Logical.Plans.Aggregate;
-using Binary = Prequel.Engine.Core.Logical.Expressions.Binary;
-using Column = Prequel.Engine.Core.Logical.Expressions.Column;
-using Literal = Prequel.Engine.Core.Logical.Expressions.Literal;
-using Case = Prequel.Engine.Core.Logical.Expressions.Case;
-using Prequel.Engine.Core.Logical.Expressions;
-using Prequel.Engine.Core.Logical.Plans;
-using Prequel.Engine.Core.Logical.Values;
-using Prequel.Engine.Core.Physical.Expressions;
-using Prequel.Engine.Core;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical;
+using Prequel.Logical.Expressions;
+using Prequel.Logical.Plans;
+using Prequel.Logical.Values;
+using Prequel.Physical.Expressions;
+using Prequel.Data;
+using Prequel.Logical;
+using Aggregate = Prequel.Logical.Plans.Aggregate;
+using Binary = Prequel.Logical.Expressions.Binary;
+using Column = Prequel.Logical.Expressions.Column;
+using Literal = Prequel.Logical.Expressions.Literal;
+using Case = Prequel.Logical.Expressions.Case;
 
 namespace Prequel.Tests.Data;
 
@@ -199,7 +198,7 @@ public class ModelTests
     [Fact]
     public void Join_Overrides_ToString()
     {
-        var join = new Engine.Core.Logical.Plans.Join(
+        var join = new Prequel.Logical.Plans.Join(
             new TestPlan(), 
             new TestPlan(),
             [],

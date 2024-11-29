@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using Prequel.Engine.Core.Data;
+using Prequel.Data;
 using Prequel.Engine.Source.Database;
 
 namespace Prequel.Tests.Fakes;

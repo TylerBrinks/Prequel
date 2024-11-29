@@ -1,7 +1,4 @@
-﻿using Prequel.Engine.Core.Data;
-using Prequel.Engine.Source.Memory;
-using Prequel.Engine.Core;
-using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
 using Prequel.Engine.Source.Memory;
 
 namespace Prequel.Tests.Sources

@@ -1,6 +1,6 @@
-﻿using Prequel.Engine.Core.Logical.Values;
-using Prequel.Engine.Core.Values;
-using Prequel.Engine.Core.Data;
+﻿using Prequel.Logical.Values;
+using Prequel.Values;
+using Prequel.Data;
 
 namespace Prequel.Tests.Data
 {

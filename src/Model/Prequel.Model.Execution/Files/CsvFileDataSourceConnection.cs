@@ -1,4 +1,4 @@
-﻿using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
 using Prequel.Engine.Source.Csv;
 using Prequel.Engine.Source.File;
 using Prequel.Model.Execution.Database;

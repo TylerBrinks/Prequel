@@ -21,7 +21,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1B30C110
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Tests", "src\Tests\Prequel.Tests\Prequel.Tests.csproj", "{BE75C56F-F7A4-4101-953F-0FD31DA03852}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Core", "src\Engine\Prequel.Engine.Core\Prequel.Engine.Core.csproj", "{6C4622D5-09F2-4C80-B4D7-E39812812CCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine", "src\Engine\Prequel\Prequel.csproj", "{6C4622D5-09F2-4C80-B4D7-E39812812CCC}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Database", "src\Engine\Sources\Database\Prequel.Engine.Source.Database\Prequel.Engine.Source.Database.csproj", "{3D0B7509-4CFE-40A5-A494-216DF101FAAC}"
 EndProject

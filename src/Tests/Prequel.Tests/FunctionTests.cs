@@ -1,9 +1,8 @@
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical.Values;
-using Prequel.Engine.Core.Physical.Expressions;
-using Prequel.Engine.Core.Physical.Functions;
-using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Physical.Aggregation;
+using Prequel.Data;
+using Prequel.Logical.Values;
+using Prequel.Physical.Expressions;
+using Prequel.Physical.Functions;
+using Prequel.Physical.Aggregation;
 
 namespace Prequel.Tests;
 
@@ -106,7 +105,7 @@ public class FunctionTests
     {
         var expression = new Literal(new StringScalar("abc"));
         var fn = new AverageFunction(expression, "test", ColumnDataType.Utf8);
-        Assert.Single(fn.StateFields!);
+        Assert.Single(fn.StateFields);
         Assert.Equal("test", fn.StateFields.First().Name);
         Assert.Equal(ColumnDataType.Utf8, fn.StateFields.First().DataType);
         Assert.Equal(QualifiedField.Unqualified("test", ColumnDataType.Utf8), fn.NamedQualifiedField);

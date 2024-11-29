@@ -1,4 +1,4 @@
-﻿using Prequel.Engine.Core.Data;
+﻿using Prequel.Data;
 using Prequel.Engine.Source.Avro;
 using Prequel.Tests.Fakes;
 using Prequel.Engine.IO;

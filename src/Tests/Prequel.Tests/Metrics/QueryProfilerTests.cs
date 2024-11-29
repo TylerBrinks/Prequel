@@ -1,8 +1,8 @@
-﻿using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Metrics;
+﻿using Prequel.Data;
+using Prequel.Metrics;
 using Prequel.Engine.IO;
 using Prequel.Engine.Source.Parquet;
-using Exec = Prequel.Engine.Core.Execution.ExecutionContext;
+using Exec = Prequel.Execution.ExecutionContext;
 
 namespace Prequel.Tests.Metrics;
 
