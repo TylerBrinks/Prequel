@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<AssemblyName>Pequel</AssemblyName>
@@ -26,25 +26,22 @@
 		<EmbedUntrackedSources>true</EmbedUntrackedSources>
 		<IncludeSymbols>true</IncludeSymbols>
 		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
-		<AssemblyOriginatorKeyFile>prequel.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<ItemGroup>
-	  <None Remove="Prequel.Core.csproj.DotSettings" />
+		<None Remove="Prequel.Core.csproj.DotSettings" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<InternalsVisibleTo Include="Prequel.Tests, PublicKey=0024000004800000940000000602000000240000525341310004000001000100cd3d8a0d341746ff3aea59ef3041d0ed44a65707b9b6372aa48145987456aa3e80794defd585c2fbe39706cc1e00b838c746a416e84edcb19fe42df8df1bf2969e6543350ea44ebd2c229973c39ea81ee456d5c8027ef177802f9d1266aab70e9893896be0218c53b6d23cc6e0c8a5cf12233faeb94aac31bf8ff900803ec0ef" />
 	</ItemGroup>
 
 
 	<ItemGroup>
-		<InternalsVisibleTo Include="Prequel.Tests" />
-		<InternalsVisibleTo Include="Prequel.Execution" />
-	</ItemGroup>
-
-
-	<ItemGroup>
-	  <None Include="..\..\Docs\icon.png">
-	    <Pack>True</Pack>
-	    <PackagePath>\</PackagePath>
-	  </None>
+		<None Include="..\..\..\docs\icon.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 	</ItemGroup>
 
 

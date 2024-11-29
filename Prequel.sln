@@ -19,43 +19,43 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Engine", "Engine", "{3D2C63
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Model", "Model", "{1B30C110-2B25-4782-BEED-05354B0180AF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Tests", "Tests\Prequel.Tests\Prequel.Tests.csproj", "{BE75C56F-F7A4-4101-953F-0FD31DA03852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Tests", "src\Tests\Prequel.Tests\Prequel.Tests.csproj", "{BE75C56F-F7A4-4101-953F-0FD31DA03852}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Core", "Engine\Prequel.Engine.Core\Prequel.Engine.Core.csproj", "{6C4622D5-09F2-4C80-B4D7-E39812812CCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Core", "src\Engine\Prequel.Engine.Core\Prequel.Engine.Core.csproj", "{6C4622D5-09F2-4C80-B4D7-E39812812CCC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Database", "Engine\Sources\Database\Prequel.Engine.Source.Database\Prequel.Engine.Source.Database.csproj", "{3D0B7509-4CFE-40A5-A494-216DF101FAAC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Database", "src\Engine\Sources\Database\Prequel.Engine.Source.Database\Prequel.Engine.Source.Database.csproj", "{3D0B7509-4CFE-40A5-A494-216DF101FAAC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.MsSql", "Engine\Sources\Database\Prequel.Engine.Source.MsSql\Prequel.Engine.Source.MsSql.csproj", "{659B3EB3-83BB-4CCB-BBD3-D4D4C654B1EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.MsSql", "src\Engine\Sources\Database\Prequel.Engine.Source.MsSql\Prequel.Engine.Source.MsSql.csproj", "{659B3EB3-83BB-4CCB-BBD3-D4D4C654B1EA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Execution", "Engine\Sources\Prequel.Engine.Source.Execution\Prequel.Engine.Source.Execution.csproj", "{F97D664E-68B3-4727-BB8D-F3AEB728F70A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Execution", "src\Engine\Sources\Prequel.Engine.Source.Execution\Prequel.Engine.Source.Execution.csproj", "{F97D664E-68B3-4727-BB8D-F3AEB728F70A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Memory", "Engine\Sources\Prequel.Engine.Source.Memory\Prequel.Engine.Source.Memory.csproj", "{66C2C8E9-63D1-4812-9F33-4A02F48DE7AC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Memory", "src\Engine\Sources\Prequel.Engine.Source.Memory\Prequel.Engine.Source.Memory.csproj", "{66C2C8E9-63D1-4812-9F33-4A02F48DE7AC}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Avro", "Engine\Sources\File\Prequel.Engine.Source.Avro\Prequel.Engine.Source.Avro.csproj", "{F813DE94-96A8-4520-9C98-53DB1164DB45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Avro", "src\Engine\Sources\File\Prequel.Engine.Source.Avro\Prequel.Engine.Source.Avro.csproj", "{F813DE94-96A8-4520-9C98-53DB1164DB45}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Csv", "Engine\Sources\File\Prequel.Engine.Source.Csv\Prequel.Engine.Source.Csv.csproj", "{EC2B4C1B-C397-4E8D-AE57-E85FAD8FD167}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Csv", "src\Engine\Sources\File\Prequel.Engine.Source.Csv\Prequel.Engine.Source.Csv.csproj", "{EC2B4C1B-C397-4E8D-AE57-E85FAD8FD167}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.File", "Engine\Sources\File\Prequel.Engine.Source.File\Prequel.Engine.Source.File.csproj", "{82CB9387-E848-4575-9519-A9DB37BD37EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.File", "src\Engine\Sources\File\Prequel.Engine.Source.File\Prequel.Engine.Source.File.csproj", "{82CB9387-E848-4575-9519-A9DB37BD37EB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Json", "Engine\Sources\File\Prequel.Engine.Source.Json\Prequel.Engine.Source.Json.csproj", "{37DB8CFC-8348-4A35-BBCD-E88244FB5158}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Json", "src\Engine\Sources\File\Prequel.Engine.Source.Json\Prequel.Engine.Source.Json.csproj", "{37DB8CFC-8348-4A35-BBCD-E88244FB5158}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Parquet", "Engine\Sources\File\Prequel.Engine.Source.Parquet\Prequel.Engine.Source.Parquet.csproj", "{8FDEBF79-E165-4419-A641-7B798E9CC6F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Source.Parquet", "src\Engine\Sources\File\Prequel.Engine.Source.Parquet\Prequel.Engine.Source.Parquet.csproj", "{8FDEBF79-E165-4419-A641-7B798E9CC6F7}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Caching", "Engine\Caching\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj", "{1AC646E1-8155-4FCE-AA74-D4B5DD1034B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Caching", "src\Engine\Caching\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj", "{1AC646E1-8155-4FCE-AA74-D4B5DD1034B1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Caching.Azure", "Engine\Caching\Prequel.Engine.Caching.Azure\Prequel.Engine.Caching.Azure.csproj", "{C2A81181-5D04-480A-BDFB-2694B44A5522}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.Caching.Azure", "src\Engine\Caching\Prequel.Engine.Caching.Azure\Prequel.Engine.Caching.Azure.csproj", "{C2A81181-5D04-480A-BDFB-2694B44A5522}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.IO", "Engine\IO\Prequel.Engine.IO\Prequel.Engine.IO.csproj", "{68A8171F-0D6A-46A6-BF1C-FB5E6FCD66DB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.IO", "src\Engine\IO\Prequel.Engine.IO\Prequel.Engine.IO.csproj", "{68A8171F-0D6A-46A6-BF1C-FB5E6FCD66DB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.IO.Aws", "Engine\IO\Prequel.Engine.IO.Aws\Prequel.Engine.IO.Aws.csproj", "{ED19BF61-87D8-4718-98FD-269109DDDF10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.IO.Aws", "src\Engine\IO\Prequel.Engine.IO.Aws\Prequel.Engine.IO.Aws.csproj", "{ED19BF61-87D8-4718-98FD-269109DDDF10}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.IO.Azure", "Engine\IO\Prequel.Engine.IO.Azure\Prequel.Engine.IO.Azure.csproj", "{E8E33A5B-613F-428B-9DE8-850FCD97FFBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Engine.IO.Azure", "src\Engine\IO\Prequel.Engine.IO.Azure\Prequel.Engine.IO.Azure.csproj", "{E8E33A5B-613F-428B-9DE8-850FCD97FFBF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Model.Execution", "Model\Prequel.Model.Execution\Prequel.Model.Execution.csproj", "{BF9A9A96-A710-4995-996D-215A005A694F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Model.Execution", "src\Model\Prequel.Model.Execution\Prequel.Model.Execution.csproj", "{BF9A9A96-A710-4995-996D-215A005A694F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Console", "Tests\Prequel.Console\Prequel.Console.csproj", "{81C4DF00-81F9-4695-BD66-E49400444D13}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Prequel.Console", "src\Tests\Prequel.Console\Prequel.Console.csproj", "{81C4DF00-81F9-4695-BD66-E49400444D13}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prequel.Engine.Caching.File", "Engine\Caching\Prequel.Engine.Caching.File\Prequel.Engine.Caching.File.csproj", "{0CC83084-2048-488A-B2A7-BC6692031578}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prequel.Engine.Caching.File", "src\Engine\Caching\Prequel.Engine.Caching.File\Prequel.Engine.Caching.File.csproj", "{0CC83084-2048-488A-B2A7-BC6692031578}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
