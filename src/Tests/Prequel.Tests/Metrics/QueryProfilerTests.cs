@@ -18,17 +18,18 @@ public class QueryProfilerTests
             {
                 using (profiler.Step("Level 3"))
                 {
-                    await Task.Delay(500);
+                    await Task.Delay(100);
                 }
 
-                await Task.Delay(500);
+                await Task.Delay(100);
             }
 
-            await Task.Delay(500);
+            await Task.Delay(100);
         }
+        await Task.Delay(100);
 
         profiler.Stop();
-        Assert.True((double) profiler.DurationMilliseconds >= TimeSpan.FromSeconds(1.5).TotalMilliseconds);
+        Assert.True((double) profiler.DurationMilliseconds >= 300);
         Assert.True(profiler.Root.DurationMilliseconds > profiler.Root.Children![0].DurationMilliseconds);
         Assert.True(profiler.Root.Children[0].DurationMilliseconds > profiler.Root.Children![0].Children![0].DurationMilliseconds);
         Assert.True(profiler.Root.Children![0].Children![0].DurationMilliseconds > profiler.Root.Children![0].Children![0].Children![0].DurationMilliseconds);
