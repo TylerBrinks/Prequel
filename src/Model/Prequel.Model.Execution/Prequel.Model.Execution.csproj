@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Engine\Caching\Prequel.Engine.Caching.Azure\Prequel.Engine.Caching.Azure.csproj" />
+    <ProjectReference Include="..\..\Engine\Caching\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj" />
+    <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO.Aws\Prequel.Engine.IO.Aws.csproj" />
+    <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO.Azure\Prequel.Engine.IO.Azure.csproj" />
+    <ProjectReference Include="..\..\Engine\IO\Prequel.Engine.IO\Prequel.Engine.IO.csproj" />
+    <ProjectReference Include="..\..\Engine\Prequel\Prequel.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.Database\Prequel.Engine.Source.Database.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Database\Prequel.Engine.Source.MsSql\Prequel.Engine.Source.MsSql.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Avro\Prequel.Engine.Source.Avro.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Csv\Prequel.Engine.Source.Csv.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.File\Prequel.Engine.Source.File.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Json\Prequel.Engine.Source.Json.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\File\Prequel.Engine.Source.Parquet\Prequel.Engine.Source.Parquet.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Prequel.Engine.Source.Execution\Prequel.Engine.Source.Execution.csproj" />
+    <ProjectReference Include="..\..\Engine\Sources\Prequel.Engine.Source.Memory\Prequel.Engine.Source.Memory.csproj" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+		<PackageReference Include="MySql.Data" Version="9.1.0" />
+		<PackageReference Include="Npgsql" Version="9.0.1" />
+		<PackageReference Include="Snowflake.Data" Version="4.2.0" />
+	</ItemGroup>
+</Project>
