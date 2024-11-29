@@ -1,9 +1,32 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
+		<AssemblyName>Pequel</AssemblyName>
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
+		<Title>Prequel - SQL Query Engine for .NET</Title>
+		<Authors>Tyler Brinks</Authors>
+		<Company />
+		<Description>Friendly SQL Query Engine for .NET</Description>
+		<Copyright>Tyler Brinks</Copyright>
+		<PackageProjectUrl>https://github.com/TylerBrinks/Prequel</PackageProjectUrl>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
+		<RepositoryUrl>https://github.com/TylerBrinks/Prequel</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<PackageTags>SQL, Query, Engine, Parser, MySQL, MsSql, Redshift, Snowflake, SQLite, Dialect</PackageTags>
+		<PackageIcon>icon.png</PackageIcon>
+		<PackageId>Prequel</PackageId>
+		<PublishRepositoryUrl>true</PublishRepositoryUrl>
+		<GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+		<GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+		<GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+		<SignAssembly>true</SignAssembly>
+		<EmbedUntrackedSources>true</EmbedUntrackedSources>
+		<IncludeSymbols>true</IncludeSymbols>
+		<SymbolPackageFormat>snupkg</SymbolPackageFormat>
+		<AssemblyOriginatorKeyFile>prequel.snk</AssemblyOriginatorKeyFile>
 	</PropertyGroup>
 
 	<ItemGroup>
@@ -14,6 +37,14 @@
 	<ItemGroup>
 		<InternalsVisibleTo Include="Prequel.Tests" />
 		<InternalsVisibleTo Include="Prequel.Execution" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <None Include="..\..\Docs\icon.png">
+	    <Pack>True</Pack>
+	    <PackagePath>\</PackagePath>
+	  </None>
 	</ItemGroup>
 
 
