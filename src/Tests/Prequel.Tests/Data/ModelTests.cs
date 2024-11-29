@@ -10,8 +10,6 @@ using Prequel.Engine.Core.Logical.Values;
 using Prequel.Engine.Core.Physical.Expressions;
 using Prequel.Engine.Core;
 using Prequel.Engine.Core.Data;
-using Prequel.Engine.Core.Logical.Expressions;
-using Prequel.Engine.Core.Logical.Plans;
 using Prequel.Engine.Core.Logical;
 
 namespace Prequel.Tests.Data;
@@ -44,7 +42,7 @@ public class ModelTests
     [Fact]
     public void ScalarVariable_Overrides_ToString()
     {
-        var column = new ScalarVariable(new []{"one", "two", "three"});
+        var column = new ScalarVariable(["one", "two", "three"]);
         Assert.Equal("one.two.three", column.ToString());
     }
 
@@ -64,14 +62,14 @@ public class ModelTests
     [Fact]
     public void Union_Overrides_ToString()
     {
-        Assert.Equal("UNION \r\n  Empty Relation", new Union(new (){new EmptyRelation()}, new Schema(new List<QualifiedField>())).ToStringIndented());
+        Assert.Equal($"UNION {Environment.NewLine}  Empty Relation", new Union([new EmptyRelation()], new Schema(new List<QualifiedField>())).ToStringIndented());
     }
 
     [Fact]
     public void Indent_Increases_Spacing()
     {
         var plan = new TestPlan {InnerPlan = new TestPlan()};
-        Assert.Equal("Test Plan\r\n  Test Plan", plan.ToStringIndented());
+        Assert.Equal($"Test Plan{Environment.NewLine}  Test Plan", plan.ToStringIndented());
     }
 
     [Fact]
@@ -89,7 +87,7 @@ public class ModelTests
         var schema = new Schema([new("name", ColumnDataType.Integer)]);
         var distinct = new Distinct(new TestPlan {Schema = schema});
         Assert.Same(schema, distinct.Schema);
-        Assert.Equal("Distinct: \r\n  Test Plan", distinct.ToStringIndented());
+        Assert.Equal($"Distinct: {Environment.NewLine}  Test Plan", distinct.ToStringIndented());
     }
 
     [Fact]
@@ -138,7 +136,7 @@ public class ModelTests
                 new("agg_col", ColumnDataType.Integer)
             ]));
 
-        Assert.Equal("Aggregate: groupBy=[group_col], aggregate=[agg_col]\r\n  Test Plan", agg.ToStringIndented());
+        Assert.Equal($"Aggregate: groupBy=[group_col], aggregate=[agg_col]{Environment.NewLine}  Test Plan", agg.ToStringIndented());
     }
 
     [Fact]
@@ -175,7 +173,7 @@ public class ModelTests
     {
         var filter = new Filter(new TestPlan(), new Column("test"));
 
-        Assert.Equal("Filter: test\r\n  Test Plan", filter.ToStringIndented());
+        Assert.Equal($"Filter: test{Environment.NewLine}  Test Plan", filter.ToStringIndented());
         Assert.Equal("Filter: test", filter.ToString());
     }
 
@@ -184,7 +182,7 @@ public class ModelTests
     {
         var limit = new Limit(new TestPlan(), 1, 2);
 
-        Assert.Equal("Limit: Skip 1, Limit 2\r\n  Test Plan", limit.ToStringIndented());
+        Assert.Equal($"Limit: Skip 1, Limit 2{Environment.NewLine}  Test Plan", limit.ToStringIndented());
         Assert.Equal("Limit: Skip 1, Limit 2", limit.ToString());
     }
 
@@ -194,7 +192,7 @@ public class ModelTests
         var schema = new Schema([new("name", ColumnDataType.Utf8)]);
         var alias = new SubqueryAlias(new TestPlan(), schema, "alias");
 
-        Assert.Equal("Subquery Alias: alias\r\n  Test Plan", alias.ToStringIndented());
+        Assert.Equal($"Subquery Alias: alias{Environment.NewLine}  Test Plan", alias.ToStringIndented());
         Assert.Equal("Subquery Alias: alias", alias.ToString());
     }
 
@@ -211,7 +209,7 @@ public class ModelTests
             //new JoinConstraint.On(new Expression.LiteralValue(new Value.Number("1")))
             );
 
-        Assert.Equal("Inner Join:  \r\n  Test Plan\r\n  Test Plan", join.ToStringIndented());
+        Assert.Equal($"Inner Join:  {Environment.NewLine}  Test Plan{Environment.NewLine}  Test Plan", join.ToStringIndented());
         Assert.Equal("Inner Join: ", join.ToString());
     }
 
@@ -220,7 +218,7 @@ public class ModelTests
     {
         var join = new CrossJoin(new TestPlan(), new TestPlan());
 
-        Assert.Equal("Cross Join: \r\n  Test Plan\r\n  Test Plan", join.ToStringIndented());
+        Assert.Equal($"Cross Join: {Environment.NewLine}  Test Plan{Environment.NewLine}  Test Plan", join.ToStringIndented());
         Assert.Equal("Cross Join", join.ToString());
     }
 
@@ -230,7 +228,7 @@ public class ModelTests
         var schema = new Schema([new("name", ColumnDataType.Utf8)]);
         var projection = new Projection(new TestPlan(), [new Column("column")], schema);
 
-        Assert.Equal("Projection: column \r\n  Test Plan", projection.ToStringIndented());
+        Assert.Equal($"Projection: column {Environment.NewLine}  Test Plan", projection.ToStringIndented());
     }
 
     [Fact]
@@ -249,9 +247,9 @@ public class ModelTests
         var string2 = indent.Repeat(new TestPlan());
         var string3 = indent.Repeat(new TestPlan());
 
-        Assert.Equal("\r\nTest Plan", string1);
-        Assert.Equal("\r\nTest Plan", string2);
-        Assert.Equal("\r\nTest Plan", string3);
+        Assert.Equal($"{Environment.NewLine}Test Plan", string1);
+        Assert.Equal($"{Environment.NewLine}Test Plan", string2);
+        Assert.Equal($"{Environment.NewLine}Test Plan", string3);
     }
 
     [Fact]
