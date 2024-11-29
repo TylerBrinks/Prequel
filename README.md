@@ -52,8 +52,8 @@ A query engine is software that interprets a query (Structured Query Language) a
  - [X] Aggregations - `min`/`max`/`stddev`/etc...
  - [X] Math pperations
  - [X] `CAST` functions
- - [] `EXCLUDE`/`EXCEPT` - Not yet implemented
- - [] `EXPLAIN` - Not yet implemented
+ - [ ] `EXCLUDE`/`EXCEPT` - Not yet implemented
+ - [ ] `EXPLAIN` - Not yet implemented
 
 ## Motivation
 This project contains a full overview of how query engines are built.  Part of the goal with this project is to demonstrate the mechanics of a query engine.  Chances are you use some form of database, BI tool, or ETL process as part of your daily development.  While the code here is fully functional, it’s also academic in the sense that it gives a full picture of how data is gathered, aggregated, sorted, filtered, and so on, by your favorite data engine.  Whether Postgres, MySql, BigQuery, Snowflake, or any of the dozens of database systems or cloud-hosted data platforms.
