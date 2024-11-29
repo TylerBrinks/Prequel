@@ -24,12 +24,12 @@ runs:
         dotnet-version: ${{ inputs.dotnet-version }}
 
     - name: Setup the git version tools
-      uses: gittools/actions/gitversion/setup@v0.9.15
+      uses: gittools/actions/gitversion/setup@v3.0.3
       with:
         versionSpec: ${{ inputs.git-tools-version }}
 
     - name: Update the semantic version of the projects
-      uses: gittools/actions/gitversion/execute@v0.9.15
+      uses: gittools/actions/gitversion/execute@v3.0.3
       id: version
       with:
         useConfigFile: true
