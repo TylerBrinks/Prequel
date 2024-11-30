@@ -1,10 +1,10 @@
-# Prequel
+# Prequel - C# SQL Query Engine
 
 [![NuGet Status](https://img.shields.io/nuget/v/Prequel.QueryEngine.svg)](https://www.nuget.org/packages/Prequel.QueryEngine/)  [![CD](https://github.com/TylerBrinks/Prequel/actions/workflows/cd.yml/badge.svg)](https://github.com/TylerBrinks/Prequel/actions/workflows/cd.yml) 
 
 [Prequel](/docs/index.md) is a SQL query engine built in C#.  The goal of this project is to demonstrate how query engines are built, and to bring a query engine to the .NET community.
 
-The project contains a step-by-step overview of how a query engine is built.  The project is also available as a NuGet package and can be integrated into your project to support querying virtually any source where data can be collected. 
+The project contains a [step-by-step overview](/docs/index.md) explaining how database query engines are built.  The project is also available as a NuGet package and can be integrated into your project to support querying virtually any source where data can be collected. 
 
 The project contains several example data sources including CSV, Avro, Parquet, JSON, MS Sql, etc..  Adding new data sources is trivial and allows any data source to be queried with SQL, even querying data across disparate sources (e.g. join JSON to CSV or tables in a RDBMS instance).
 
@@ -54,9 +54,10 @@ A query engine is software that interprets a query (Structured Query Language) a
  - [X] `CAST` functions
  - [ ] `EXCLUDE`/`EXCEPT` - Not yet implemented
  - [ ] `EXPLAIN` - Not yet implemented
+ - [ ] Insert, Update, Drop operations
 
 ## Motivation
-This project contains a full overview of how query engines are built.  Part of the goal with this project is to demonstrate the mechanics of a query engine.  Chances are you use some form of database, BI tool, or ETL process as part of your daily development.  While the code here is fully functional, it’s also academic in the sense that it gives a full picture of how data is gathered, aggregated, sorted, filtered, and so on, by your favorite data engine.  Whether Postgres, MySql, BigQuery, Snowflake, or any of the dozens of database systems or cloud-hosted data platforms.
+This project contains a [full overview](/docs/index.md) of how query engines are built.  Part of the goal with this project is to demonstrate the mechanics of a query engine.  Chances are you use some form of database, BI tool, or ETL process as part of your daily development.  While the code here is fully functional, it’s also academic in the sense that it gives a full picture of how data is gathered, aggregated, sorted, filtered, and so on, by your favorite data engine.  Whether Postgres, MySql, BigQuery, Snowflake, or any of the dozens of database systems or cloud-hosted data platforms.
 
 ## Contribution
 Contributions are what make open-source work.  We greatly appreciate any contributions.  Thank you for being a part of our community! 🥰
