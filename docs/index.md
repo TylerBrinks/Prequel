@@ -9,7 +9,7 @@ The code in this project uses the [SqlParser C# SQL grammar parser](https://gith
 
 This project’s documentation outlines every step involved in building a generic query engine.
 
-##Table of Contents
+## Table of Contents
 
 1.   [Data Types](data-types.md)
 2.   [Data Sources](data-sources.md)

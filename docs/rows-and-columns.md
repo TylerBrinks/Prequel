@@ -114,3 +114,18 @@ public override void Reorder(List<int> indices)
 ```
 
 There is no right or wrong answer in terms of how a query engine should work.  This project uses a column-based approach since most operations are intended to run in memory across multiple data sources.  Nonetheless, you can plug in virtually any source from which you can read data.
+
+---
+
+## Continue Reading
+
+1.   [Data Types](data-types.md)
+2.   [Data Sources](data-sources.md)
+3.   [Logical Plans](logical-plans.md)
+4.   [Physical Plans](physical-plans.md)
+5.   [Query Planning](query-planning.md)
+6.   [Query Optimization](query-optimization.md)
+7.   [Query Execution](query-execution.md)
+8.   [Async Enumeration](async-execution.md)
+9.   [Rows vs. Columns](rows-and-columns.md)
+10.  [SQL Dialect](sql-dialect.md)

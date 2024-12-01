@@ -95,3 +95,17 @@ These are the discrete steps required to build the logical plan.  These steps ar
 
 While it would be possible to execute the plan in this state, optimizing the plan will produce far better results.  Optimization is a topic unto itself.   [Continue here for the Query Optimization process](query-optimization.md).
 
+---
+
+## Continue Reading
+
+1.   [Data Types](data-types.md)
+2.   [Data Sources](data-sources.md)
+3.   [Logical Plans](logical-plans.md)
+4.   [Physical Plans](physical-plans.md)
+5.   [Query Planning](query-planning.md)
+6.   [Query Optimization](query-optimization.md)
+7.   [Query Execution](query-execution.md)
+8.   [Async Enumeration](async-execution.md)
+9.   [Rows vs. Columns](rows-and-columns.md)
+10.  [SQL Dialect](sql-dialect.md)

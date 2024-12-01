@@ -117,3 +117,18 @@ Data sources that contain schema metadata, such as Postgres or MS Sql, provide s
 
 Mapping specific types to Prequel's primitive types makes it possible to run filter logic and join logic across different data sources.  In other words, having a common type
 system allows joining a Postgres boolean column to a CSV file with an inferred boolean column.
+
+---
+
+## Continue Reading
+
+1.   [Data Types](data-types.md)
+2.   [Data Sources](data-sources.md)
+3.   [Logical Plans](logical-plans.md)
+4.   [Physical Plans](physical-plans.md)
+5.   [Query Planning](query-planning.md)
+6.   [Query Optimization](query-optimization.md)
+7.   [Query Execution](query-execution.md)
+8.   [Async Enumeration](async-execution.md)
+9.   [Rows vs. Columns](rows-and-columns.md)
+10.  [SQL Dialect](sql-dialect.md)
