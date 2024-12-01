@@ -1,6 +1,6 @@
 # Data Sources
 
-Data sources contain the answer to the question that a SQL query asks.  Whether raw data is stored in a proprietary database, like Postgres, in a flat file like wotj comma or tab delimited values, or even an HTTP call to a web API, the process of querying the data is the same.  A data source is simply the wrapper around the data being queried.
+Data sources contain the answer to the question that a SQL query asks.  Whether raw data is stored in a proprietary database, like Postgres, in a flat file like with comma or tab delimited values, or even an HTTP call to a web API, the process of querying the data is the same.  A data source is simply the wrapper around the data being queried.
 
 Prequel is data source agnostic, and supports runtime-configured sources, several of which are included in the project’s source code.
 
