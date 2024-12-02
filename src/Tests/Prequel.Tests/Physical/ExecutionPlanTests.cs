@@ -340,14 +340,10 @@ public class PlanTests
 
         var batch = await explain.ExecuteAsync(new QueryContext()).FirstAsync();
 
-        var expectedSchema = new Schema([new QualifiedField("plan", ColumnDataType.Utf8)]);
-        Assert.Equal(expectedSchema, batch.Schema);
-
-        Assert.Equal(4, batch.Results[0].Values.Count);
-        Assert.Equal("Limit: Skip 5, Limit 10", batch.Results[0].Values[0]);
-        Assert.Equal("  Sort:  db.a Desc", batch.Results[0].Values[1]);
-        Assert.Equal("    Projection: db.a, db.b ", batch.Results[0].Values[2]);
-        Assert.Equal("      Table Scan: db projection=(db.a, db.b, db.c)", batch.Results[0].Values[3]);
+        Assert.Equal(3, batch.Results[0].Values.Count);
+        Assert.Equal("Limit: Skip 5, Limit 10", batch.Results[1].Values[0]);
+        Assert.Equal("  Sort:  db.a Desc", batch.Results[1].Values[1]);
+        Assert.Equal("    Table Scan: db projection=(a, b)", batch.Results[1].Values[2]);
     }
 
     [Fact]

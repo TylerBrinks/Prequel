@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Prequel.Data;
 using Prequel.Execution;
+using Prequel.Logical;
 
 namespace Prequel.Tests.Fakes;
 
@@ -39,6 +40,8 @@ public class FakeTableExecution : IExecutionPlan
             yield return batch;
         }
     }
+
+    public string ToStringIndented(Indentation? indentation = null) => string.Empty;
 
     public async IAsyncEnumerable<List<string?[]>> Read(List<int> indices, int batchSize)
     {
