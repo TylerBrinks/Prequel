@@ -19,12 +19,10 @@ internal record TableScan(string Name, Schema Schema, DataTable Table, List<int>
 
     public override string ToString()
     {
-        string? fields = null;
-        if (Projection != null)
-        {
-            fields = " projection=" + string.Join(",", Projection.Select(i => Table.Schema!.Fields[i].Name));
-        }
+        var fields = string.Join(", ", Projection != null 
+            ? Projection.Select(i => Table.Schema!.Fields[i].Name) 
+            : Schema.Fields.Select(f => f.QualifiedName));
 
-        return $"Table Scan: {Name}{fields}";
+        return $"Table Scan: {Name} projection=({fields})";
     }
 }

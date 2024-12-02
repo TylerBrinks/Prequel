@@ -179,6 +179,14 @@ execution.AddQuery(new Query
            """
 });
 
+execution.AddQuery(new Query
+{
+    Name = "explain_scalar_value",
+    Text = """
+           EXPLAIN SELECT 1
+           """
+});
+
 // Slightly more complex, scalar values can be calculated using basic
 // SQL-style arithmetic.  The query returns a table with three columns
 // with the calculated values.
@@ -212,7 +220,7 @@ execution.AddQuery(new Query
 {
     Name = "all_colors",
     Text = """
-           SELECT
+           EXPLAIN SELECT
              *
            FROM colors
            """
@@ -327,6 +335,38 @@ execution.AddQuery(new Query
            """
 });
 
+execution.AddQuery(new Query
+{
+    Name = "explain_simple_query",
+    Text = """
+           EXPLAIN SELECT
+             max(c1) as max_c1, avg(c3) avg_c3
+           FROM colors
+           WHERE c1 in (1,2,3)
+           ORDER BY max_c1, avg_c3 desc
+           LIMIT 10 
+           OFFSET 3
+           """
+});
+
+execution.AddQuery(new Query
+{
+    Name = "explain_complex_query",
+    Text = """
+           EXPLAIN SELECT 
+             m.employee_id as ManagerId, 
+             e.employee_id as EmpId, 
+             m.first_name ManagerFN, 
+             m.last_name ManagerLN,
+             e.first_name EmployeeFN, 
+             e.last_name EmployeeLN
+           FROM employees m
+           JOIN employees e
+           ON m.employee_id = e.manager_id
+           WHERE e.manager_id in (100, 101)
+           ORDER BY e.manager_id
+           """
+});
 #endregion
 
 var result = await execution.ExecuteAllAsync();

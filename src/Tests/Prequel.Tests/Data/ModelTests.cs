@@ -163,8 +163,8 @@ public class ModelTests
             new EmptyDataTable("", schema, []), 
             []);
           
-        Assert.Equal("Table Scan: table projection=", scan.ToStringIndented());
-        Assert.Equal("Table Scan: table projection=", scan.ToString());
+        Assert.Equal("Table Scan: table projection=()", scan.ToStringIndented());
+        Assert.Equal("Table Scan: table projection=()", scan.ToString());
     }
 
     [Fact]

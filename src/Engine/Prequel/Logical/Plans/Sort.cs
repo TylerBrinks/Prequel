@@ -126,10 +126,11 @@ internal record Sort(ILogicalPlan Plan, List<ILogicalExpression> OrderByExpressi
         });
     }
 
-
     public string ToStringIndented(Indentation? indentation = null)
     {
         var indent = indentation ?? new Indentation();
-        return $"Sort: {indent.Next(Plan)}";
+        var orders = string.Join(",", OrderByExpressions.Select(o => o.ToString()?
+            .Replace("Order By",string.Empty, StringComparison.InvariantCultureIgnoreCase)));
+        return $"Sort: {orders}{indent.Next(Plan)}";
     }
 }
