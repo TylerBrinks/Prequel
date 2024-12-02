@@ -3,6 +3,7 @@ using Prequel.Physical.Aggregation;
 using Prequel.Physical.Expressions;
 using Prequel.Metrics;
 using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Physical;
 
 namespace Prequel.Execution;
@@ -136,5 +137,13 @@ internal record AggregateExecution(
                 yield return batch;
             }
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        var groups = GroupBy.ToString();
+        var aggregates = string.Join(",", AggregateExpressions);
+        return $"Aggregate Execution: groupBy=[{groups}], aggregate=[{aggregates}]{indent.Next(Plan)}";
     }
 }

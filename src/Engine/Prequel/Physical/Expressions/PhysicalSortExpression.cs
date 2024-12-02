@@ -26,4 +26,10 @@ internal record PhysicalSortExpression(
     {
         throw new NotImplementedException();
     }
+
+    public override string ToString()
+    {
+        var fields = string.Join(", ", SortSchema.Fields.Select(f => $"{f.Name}:{f.DataType}"));
+        return fields;
+    }
 }

@@ -1,4 +1,5 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 using Prequel.Physical.Joins;
 using System.Runtime.CompilerServices;
@@ -65,7 +66,7 @@ internal record NestedLoopJoinExecution(
             // Bitmap for a full join
             var visitedLeftSide = JoinType == JoinType.Full
                 ? new bool[leftMerged.RowCount]
-                : Array.Empty<bool>();
+                : [];
 
             using (var rightStep = queryContext.Profiler.Step("Execution Plan, Nested Loop, Execute right"))
             {
@@ -103,7 +104,7 @@ internal record NestedLoopJoinExecution(
                 {
                     leftStep.IncrementBatch(leftBatch.RowCount);
 
-                    yield return JointLeftAndRightBatch(leftBatch, rightBatch, ColumnIndices, Array.Empty<bool>());
+                    yield return JointLeftAndRightBatch(leftBatch, rightBatch, ColumnIndices, []);
                 }
             }
         }
@@ -191,5 +192,11 @@ internal record NestedLoopJoinExecution(
 
             _ => throw new NotImplementedException("AdjustIndicesByJoinType Implement join type")
         };
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        return $"Nested Loop Join: {indent.Next(Left)}{indent.Repeat(Right)}";
     }
 }

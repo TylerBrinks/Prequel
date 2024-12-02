@@ -35,4 +35,6 @@ public class LocalFileStream(string filePath) : IFileStream
     {
         return await Task.FromResult(File.OpenWrite(filePath));
     }
+
+    public override string ToString() => $"Local file stream: path={filePath}";
 }

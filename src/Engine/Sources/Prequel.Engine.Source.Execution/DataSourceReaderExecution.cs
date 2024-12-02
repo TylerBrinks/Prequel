@@ -3,6 +3,7 @@ using Prequel.Execution;
 using Prequel.Metrics;
 using Prequel.Engine.IO;
 using System.Runtime.CompilerServices;
+using Prequel.Logical;
 
 namespace Prequel.Engine.Source.Execution;
 
@@ -79,4 +80,6 @@ public class DataSourceReaderExecution : IExecutionPlan
             yield return batch;
         }
     }
+
+    public string ToStringIndented(Indentation? indentation = null) => $"Data Source Read Execution: {_reader}";
 }

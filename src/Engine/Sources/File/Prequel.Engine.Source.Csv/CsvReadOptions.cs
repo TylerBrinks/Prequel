@@ -17,4 +17,6 @@ public class CsvReadOptions
     /// Number of records to read when inferring the file's schema
     /// </summary>
     public int InferMax { get; set; } = 100;
+
+    public override string ToString() => $"delimiter='{Delimiter}' hasHeader={HasHeader} inferMax={InferMax}";
 }

@@ -71,4 +71,6 @@ public class FileQueryDataSourceReader : ISchemaDataSourceReader
         await enumerator.DisposeAsync();
         return schemaBatch.Schema;
     }
+
+    public override string ToString() => $"File query data source reader: '{Name}', {DataTable}";
 }

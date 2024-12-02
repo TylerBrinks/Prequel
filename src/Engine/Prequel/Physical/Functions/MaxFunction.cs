@@ -17,14 +17,17 @@ internal record MaxFunction(IPhysicalExpression Expression, string Name, ColumnD
     /// Max state to use between aggregation operations or calculation steps
     /// </summary>
     internal override List<QualifiedField> StateFields => [QualifiedField.Unqualified($"{Name}", DataType)];
+
     /// <summary>
     /// Gets the field using the unqualified format
     /// </summary>
     internal override QualifiedField NamedQualifiedField => QualifiedField.Unqualified(Name, DataType);
+
     /// <summary>
     /// Gets the expressions used as inputs for the function
     /// </summary>
     internal override List<IPhysicalExpression> Expressions => [Expression];
+
     /// <summary>
     /// Creates an accumulator for the function's data type
     /// </summary>
@@ -32,5 +35,10 @@ internal record MaxFunction(IPhysicalExpression Expression, string Name, ColumnD
     public Accumulator CreateAccumulator()
     {
         return new MaxAccumulator(DataType);
+    }
+
+    public override string ToString()
+    {
+        return $"max({Name}):{DataType}";
     }
 }

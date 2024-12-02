@@ -93,4 +93,6 @@ public class CsvDataSourceReader(IFileStream fileStream, CsvReadOptions? readOpt
     }
 
     public string[] Headers => [.. _headers];
+
+    public override string ToString() => $"CSV data source reader: {readOptions}, {fileStream}";
 }

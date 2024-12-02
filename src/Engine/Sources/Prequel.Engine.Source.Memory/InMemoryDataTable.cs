@@ -1,6 +1,7 @@
 ﻿using System.Runtime.CompilerServices;
 using Prequel.Data;
 using Prequel.Execution;
+using Prequel.Logical;
 using Prequel.Metrics;
 
 namespace Prequel.Engine.Source.Memory;
@@ -73,5 +74,10 @@ public class InMemoryDataTable(string tableName) : DataTable, IExecutionPlan
         {
             _batch.Concat(batch);
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        return "In-Memory Execution";
     }
 }

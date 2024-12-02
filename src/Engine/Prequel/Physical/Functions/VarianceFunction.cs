@@ -41,7 +41,7 @@ internal record VarianceFunction(
     /// <summary>
     /// Gets the expressions used as inputs for the function
     /// </summary>
-    internal override List<IPhysicalExpression> Expressions => new() { Expression };
+    internal override List<IPhysicalExpression> Expressions => [Expression];
     /// <summary>
     /// Creates an accumulator for the function's data type
     /// </summary>
@@ -50,4 +50,6 @@ internal record VarianceFunction(
     {
         return new VarianceAccumulator(DataType, StatisticType);
     }
+
+    public override string ToString() => $"var({Name}):{DataType}";
 }

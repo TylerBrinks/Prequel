@@ -43,6 +43,7 @@ public class AzureBlobFileStream(string blobName, BlobConnectionOptions options)
         var blobClient = _containerClient.GetBlobClient(blobName);
         return await blobClient.OpenWriteAsync(true, cancellationToken: cancellation);
     }
+    public override string ToString() => $"Azure Blob Stream blob={blobName}, collection={options.CollectionName}";
 }
 
 

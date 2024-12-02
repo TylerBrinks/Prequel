@@ -1,4 +1,5 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 using Prequel.Physical.Expressions;
 using System.Runtime.CompilerServices;
@@ -159,5 +160,13 @@ internal record SortExecution(List<PhysicalSortExpression> SortExpressions, IExe
         }
 
         return collectedBatch;
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        var orders = string.Join(",", SortExpressions.Select(o => o.ToString()?
+            .Replace("Order By", string.Empty, StringComparison.InvariantCultureIgnoreCase)));
+        return $"Sort Execution: {orders}{indent.Next(Plan)}";
     }
 }

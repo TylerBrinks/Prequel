@@ -6,4 +6,6 @@ public class AvroReadOptions
     /// Number of records to read when inferring the file's schema
     /// </summary>
     public int InferMax { get; set; } = 100;
+
+    public override string ToString() => $"inferMax={InferMax}";
 }

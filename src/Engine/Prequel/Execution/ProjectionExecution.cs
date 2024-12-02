@@ -1,4 +1,5 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 using Prequel.Physical.Expressions;
 using Prequel.Values;
@@ -73,5 +74,16 @@ internal record ProjectionExecution(
 
             yield return projection;
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+
+        var expressions = Expressions.Select(e => e.ToString()).ToList();
+
+        var projections = string.Join(", ", expressions);
+
+        return $"Projection Execution: {projections} {indent.Next(Plan)}";
     }
 }

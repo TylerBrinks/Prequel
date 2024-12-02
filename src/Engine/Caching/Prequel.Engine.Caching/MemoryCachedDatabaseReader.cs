@@ -55,4 +55,6 @@ public class MemoryCachedDataSourceReader(IDataSourceReader sourceReader) : IDat
         // ReSharper disable once RedundantJumpStatement
         yield break;
     }
+
+    public override string ToString() => "Memory cache data source reader";
 }

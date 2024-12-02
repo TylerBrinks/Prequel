@@ -53,4 +53,6 @@ internal record StandardDeviationFunction(
     {
         return new StandardDeviationAccumulator(DataType, StatisticType);
     }
+
+    public override string ToString() => $"stdev({Name}):{DataType}";
 }

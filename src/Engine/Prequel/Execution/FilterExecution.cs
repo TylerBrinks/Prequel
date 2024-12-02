@@ -1,4 +1,5 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 using Prequel.Physical.Expressions;
 using Prequel.Values;
@@ -62,5 +63,11 @@ internal record FilterExecution(IPhysicalExpression Predicate, IExecutionPlan Pl
                 yield return batch;
             }
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        return $"Filter Execution: {indent.Next(Plan)}";
     }
 }

@@ -2,6 +2,7 @@
 using Prequel.Execution;
 using Prequel.Metrics;
 using System.Runtime.CompilerServices;
+using Prequel.Logical;
 
 namespace Prequel.Engine.Source.File;
 
@@ -58,5 +59,10 @@ public class PhysicalFileExecution : IExecutionPlan
 
             yield return batch;
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        return "Physical File Execution: ";
     }
 }

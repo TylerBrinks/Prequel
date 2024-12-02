@@ -3,6 +3,7 @@ using System.Text.Json;
 using Prequel.Data;
 using Prequel.Metrics;
 using Prequel.Engine.IO;
+using Prequel.Engine.Caching;
 
 namespace Prequel.Engine.Source.Json;
 
@@ -55,4 +56,6 @@ internal class JsonDataSourceReader(IFileStream fileStream) : IDataSourceReader
     }
 
     public string[] Headers => [.. _headers.OrderBy(h => h)];
+    
+    public override string ToString() => $"JSON data source reader: {fileStream}";
 }

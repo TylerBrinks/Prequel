@@ -64,4 +64,7 @@ public class ParquetDataSourceReader(IFileStream fileStream) : IDataSourceReader
             }
         }
     }
+
+    public override string ToString() => $"Parquet cache data source reader: {fileStream}";
+
 }

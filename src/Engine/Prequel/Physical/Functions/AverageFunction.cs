@@ -33,4 +33,6 @@ internal record AverageFunction(IPhysicalExpression Expression, string Name, Col
     {
         return new AverageAccumulator(DataType);
     }
+
+    public override string ToString() =>  $"avg({Name}):{DataType}";
 }

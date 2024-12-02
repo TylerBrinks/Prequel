@@ -50,4 +50,6 @@ public class InMemoryStream : IFileStream
     {
         throw new NotImplementedException("In memory stream is not writable");
     }
+    
+    public override string ToString() => "In-memory stream";
 }

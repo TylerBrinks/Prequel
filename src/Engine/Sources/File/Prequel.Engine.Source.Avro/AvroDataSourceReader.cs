@@ -53,4 +53,6 @@ internal class AvroDataSourceReader(IFileStream fileStream) : IDataSourceReader
     }
 
     public string[] Headers => [.. _headers.OrderBy(h => h)];
+
+    public override string ToString() => $"Avro data source reader: {fileStream}";
 }

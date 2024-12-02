@@ -127,4 +127,6 @@ public class AvroDataTable : PhysicalFileDataTable
         _schema = new Schema(fields);
         return _schema;
     }
+
+    public override string ToString() => $"Avro file: {_fileStream.GetType().Name}, {_readOptions}";
 }

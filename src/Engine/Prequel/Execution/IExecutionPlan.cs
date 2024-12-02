@@ -1,4 +1,5 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 
 namespace Prequel.Execution;
 
@@ -10,4 +11,6 @@ public interface IExecutionPlan
 {
     Schema Schema { get; }
     IAsyncEnumerable<RecordBatch> ExecuteAsync(QueryContext queryContext, CancellationToken cancellation = default!);
+
+    string ToStringIndented(Indentation? indentation = null);
 }

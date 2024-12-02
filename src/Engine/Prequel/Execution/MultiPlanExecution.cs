@@ -1,5 +1,8 @@
-﻿using System.Runtime.CompilerServices;
+﻿using System.Numerics;
+using System.Runtime.CompilerServices;
+using System.Text;
 using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 
 namespace Prequel.Execution;
@@ -29,5 +32,20 @@ public class MultiPlanExecution(IEnumerable<IExecutionPlan> childPlans, Schema s
                 yield return batch;
             }
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        var builder = new StringBuilder("Multi-Plan Execution: ");
+
+        for (var i = 0; i < childPlans.Count(); i++)
+        {
+            builder.Append(i == 0
+                ? indent.Next(childPlans.Skip(i).First())
+                : indent.Repeat(childPlans.Skip(i).First()));
+        }
+
+        return builder.ToString();
     }
 }

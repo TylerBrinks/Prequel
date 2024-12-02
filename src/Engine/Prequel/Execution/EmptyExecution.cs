@@ -1,5 +1,6 @@
 ﻿using System.Runtime.CompilerServices;
 using Prequel.Data;
+using Prequel.Logical;
 
 namespace Prequel.Execution;
 
@@ -23,4 +24,6 @@ internal record EmptyExecution(Schema Schema) : IExecutionPlan
 
         yield return batch;
     }
+
+    public string ToStringIndented(Indentation? indentation = null)=> "Empty Execution";
 }

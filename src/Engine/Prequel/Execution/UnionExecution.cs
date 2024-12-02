@@ -1,6 +1,8 @@
 ﻿using System.Collections.Concurrent;
 using System.Runtime.CompilerServices;
+using System.Text;
 using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 
 namespace Prequel.Execution;
@@ -42,5 +44,20 @@ internal record UnionExecution(List<IExecutionPlan> Plans, Schema Schema) : IExe
         {
             yield return batch;
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        var builder = new StringBuilder("Union Execution: ");
+
+        for (var i = 0; i < Plans.Count; i++)
+        {
+            builder.Append(i == 0
+                ? indent.Next(Plans.Skip(i).First())
+                : indent.Repeat(Plans.Skip(i).First()));
+        }
+
+        return builder.ToString();
     }
 }

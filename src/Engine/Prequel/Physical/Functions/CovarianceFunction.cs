@@ -46,11 +46,11 @@ internal record CovarianceFunction(
     /// <summary>
     /// Gets the expressions used as inputs for the function
     /// </summary>
-    internal override List<IPhysicalExpression> Expressions => new()
-    {
+    internal override List<IPhysicalExpression> Expressions =>
+    [
         InputExpression1,
         InputExpression2
-    };
+    ];
     /// <summary>
     /// Creates an accumulator for the function's data type
     /// </summary>
@@ -59,4 +59,7 @@ internal record CovarianceFunction(
     {
         return new CovarianceAccumulator(DataType, StatisticType);
     }
+
+    public override string ToString() => $"covar({Name}):{DataType}";
+
 }

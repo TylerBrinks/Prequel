@@ -122,4 +122,6 @@ public class CsvDataTable : PhysicalFileDataTable
         _schema = new Schema(fields);
         return _schema;
     }
+    
+    public override string ToString() => $"CSV file: {_fileStream}, {_readOptions}";
 }

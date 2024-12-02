@@ -21,4 +21,6 @@ public class LimitDatabaseReader(string query, Func<DbConnection> connectionFact
     {
         return await QuerySchemaAsync(string.Format(SchemaQueryWrapper, Query.TrimEnd(';')), cancellation);
     }
+
+    public override string ToString() => "Limit database reader";
 }

@@ -353,18 +353,18 @@ execution.AddQuery(new Query
 {
     Name = "explain_complex_query",
     Text = """
-           EXPLAIN SELECT 
-             m.employee_id as ManagerId, 
-             e.employee_id as EmpId, 
-             m.first_name ManagerFN, 
-             m.last_name ManagerLN,
-             e.first_name EmployeeFN, 
-             e.last_name EmployeeLN
-           FROM employees m
-           JOIN employees e
-           ON m.employee_id = e.manager_id
-           WHERE e.manager_id in (100, 101)
-           ORDER BY e.manager_id
+           EXPLAIN
+           SELECT * FROM 
+            (SELECT count(*), c2 
+              FROM colors 
+              WHERE c2 != 'abc' 
+              GROUP BY c2 
+              ORDER BY c2) AS a 
+           UNION ALL 
+           SELECT 1, '2' as cnta 
+           UNION ALL 
+           SELECT 1 as cntb, '3' FROM (select 1 as c2) AS b 
+           LIMIT 3 OFFSET 4
            """
 });
 #endregion

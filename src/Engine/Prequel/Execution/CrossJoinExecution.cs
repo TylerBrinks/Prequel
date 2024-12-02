@@ -1,5 +1,7 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 
 namespace Prequel.Execution;
@@ -68,5 +70,11 @@ internal record CrossJoinExecution(IExecutionPlan Left, IExecutionPlan Right) : 
         arrays.AddRange(rightData.Results.Select(rightSideArray => rightSideArray.Values));
 
         return RecordBatch.TryNewWithLists(Schema, arrays);
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        return $"Cross Join: {indent.Next(Left)}{indent.Repeat(Right)}";
     }
 }

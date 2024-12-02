@@ -33,4 +33,6 @@ internal record MedianFunction(IPhysicalExpression InputExpression, string Name,
     {
         return new MedianAccumulator(DataType);
     }
+
+    public override string ToString() => $"median({Name}):{DataType}";
 }

@@ -1,8 +1,10 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 using Prequel.Physical.Expressions;
 using Prequel.Physical.Joins;
 using Prequel.Values;
+using System.Numerics;
 using System.Runtime.CompilerServices;
 
 namespace Prequel.Execution;
@@ -376,5 +378,18 @@ internal record HashJoinExecution(
                 return equal;
             }
         );
+    }
+
+    public override string ToString()
+    {
+        var on = On.Select(q => $"{q.Left} = {q.Right}").ToList();
+        var filter = Filter != null ? $" Filter: {Filter}" : "";
+        return $"{JoinType} Join: {string.Join(",", on)}{filter}";
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        return $"Hash Join: {this} {indent.Next(Left)}{indent.Repeat(Right)}";
     }
 }

@@ -40,4 +40,6 @@ public class AwsBucketFileStream(string bucketName, string key, BucketConnection
     {
         return await GetReadStreamAsync(cancellation);
     }
+
+    public override string ToString() => $"AWS Bucket Stream bucket={bucketName}, key={key}";
 }

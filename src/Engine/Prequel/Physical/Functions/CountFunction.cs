@@ -33,4 +33,6 @@ internal record CountFunction(IPhysicalExpression Expression, string Name, Colum
     {
         return new CountAccumulator();
     }
+
+    public override string ToString() => $"count({Name}):{DataType}";
 }

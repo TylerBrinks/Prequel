@@ -1,4 +1,5 @@
 ﻿using Prequel.Data;
+using Prequel.Logical;
 using Prequel.Metrics;
 using System.Runtime.CompilerServices;
 
@@ -73,5 +74,16 @@ internal record LimitExecution(IExecutionPlan Plan, int Skip, int Fetch) : IExec
                 yield break;
             }
         }
+    }
+
+    public override string ToString()
+    {
+        return $"Limit Execution: Skip {Skip}, Limit {Fetch}";
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        var indent = indentation ?? new Indentation();
+        return $"{this} {indent.Next(Plan)}";
     }
 }

@@ -33,4 +33,6 @@ internal record SumFunction(IPhysicalExpression Expression, string Name, ColumnD
     {
         return new SumAccumulator(DataType);
     }
+    
+    public override string ToString() => $"sum({Name}):{DataType}";
 }

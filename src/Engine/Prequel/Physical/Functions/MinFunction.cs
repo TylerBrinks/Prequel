@@ -33,4 +33,6 @@ internal record MinFunction(IPhysicalExpression InputExpression, string Name, Co
     {
         return new MinAccumulator(DataType);
     }
+    
+    public override string ToString() => $"min({Name}):{DataType}";
 }

@@ -2,6 +2,7 @@
 using Prequel.Metrics;
 using Prequel.Engine.IO;
 using System.Runtime.CompilerServices;
+using System.IO;
 
 namespace Prequel.Engine.Caching;
 
@@ -59,4 +60,7 @@ public class DurableCacheDataSourceReader(IDataSourceReader sourceReader, CacheO
         // ReSharper disable once RedundantJumpStatement
         yield break;
     }
+
+    public override string ToString() => $"Cache data source reader: provider={cacheOptions.CacheProvider?.GetType().Name}";
+
 }

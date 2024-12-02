@@ -12,4 +12,11 @@ internal record GroupBy(List<(IPhysicalExpression Expression, string Name)> Expr
     {
         return new GroupBy(expressions);
     }
+
+    public override string ToString()
+    {
+        var expressions = Expression.Select(e => e.ToString()).ToList();
+
+        return string.Join(", ", expressions);
+    }
 }

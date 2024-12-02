@@ -35,7 +35,7 @@ internal class PhysicalPlanner
             // Distinct should have been replaced by an 
             // aggregate plan by this point.
             Distinct => throw new InvalidOperationException("Distinct plans must be replaced with aggregations"),
-            Explain explain => new ExplainExecution(explain),
+            Explain explain => new ExplainExecution(explain,CreateInitialPlan(explain.Plan)),
 
             _ => throw new NotImplementedException("The physical plan type has not been implemented")
         };

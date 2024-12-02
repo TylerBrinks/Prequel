@@ -3,6 +3,7 @@ using Prequel.Data;
 using Prequel.Execution;
 using Prequel.Metrics;
 using Prequel.Engine.IO;
+using Prequel.Logical;
 
 namespace Prequel.Engine.Caching;
 
@@ -113,5 +114,10 @@ public class OutputCacheExecution : IExecutionPlan
         {
             await _writer.WriteAsync(batch);
         }
+    }
+
+    public string ToStringIndented(Indentation? indentation = null)
+    {
+        return "Output Cache Execution: ";
     }
 }

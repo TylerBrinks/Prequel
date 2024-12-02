@@ -76,12 +76,18 @@ public class ExecutionContext
 
         var plan = ast.First() switch
         {
-            Statement.Select select => LogicalExtensions.CreateQuery(select.Query, new PlannerContext(_tables)),
-            Statement.Explain explain => new Explain(LogicalExtensions.CreateQuery(explain.Statement.AsSelect(), new PlannerContext(_tables))),
+            Statement.Select select => Optimize(LogicalExtensions.CreateQuery(select.Query, new PlannerContext(_tables))),
+            Statement.Explain explain => 
+                new Explain(Optimize(LogicalExtensions.CreateQuery(explain.Statement.AsSelect(), new PlannerContext(_tables)))),
             _ => throw new NotImplementedException()
         };
 
-        return new LogicalPlanOptimizer().Optimize(plan);
+        return plan;
+
+        ILogicalPlan Optimize(ILogicalPlan rawPlan)
+        {
+            return new LogicalPlanOptimizer().Optimize(rawPlan);
+        }
     }
     /// <summary>
     /// Builds a physical execution plan from a logical execution plan
