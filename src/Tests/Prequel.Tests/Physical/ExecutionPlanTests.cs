@@ -6,6 +6,7 @@ using Prequel.Physical;
 using Prequel.Physical.Expressions;
 using Prequel.Execution;
 using Prequel.Data;
+using SqlParser;
 using Schema = Prequel.Data.Schema;
 using Exec = Prequel.Execution.ExecutionContext;
 
@@ -342,9 +343,17 @@ public class PlanTests
         var expectedSchema = new Schema([new QualifiedField("plan", ColumnDataType.Utf8)]);
         Assert.Equal(expectedSchema, batch.Schema);
 
+        Assert.Equal(4, batch.Results[0].Values.Count);
         Assert.Equal("Limit: Skip 5, Limit 10", batch.Results[0].Values[0]);
         Assert.Equal("  Sort:  db.a Desc", batch.Results[0].Values[1]);
         Assert.Equal("    Projection: db.a, db.b ", batch.Results[0].Values[2]);
         Assert.Equal("      Table Scan: db projection=(db.a, db.b, db.c)", batch.Results[0].Values[3]);
+    }
+
+    [Fact]
+    public void Nested_Explain_Should_Fail()
+    {
+        const string sql = "EXPLAIN EXPLAIN SELECT 1";
+        Assert.Throws<ParserException>(() => _context.BuildLogicalPlan(sql));
     }
 }

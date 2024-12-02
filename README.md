@@ -54,8 +54,8 @@ A query engine is software that interprets a query (Structured Query Language) a
  - [X] Aggregations - `min`/`max`/`stddev`/etc...
  - [X] Math opperations
  - [X] `CAST` functions
+ - [X] `EXPLAIN` plans
  - [ ] `EXCLUDE`/`EXCEPT` - Not yet implemented
- - [ ] `EXPLAIN` - Not yet implemented
  - [ ] `INSERT`, `UPDATE`, `DROP` operations
 
 ## Motivation
