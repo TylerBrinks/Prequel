@@ -18,7 +18,7 @@ internal record Union(List<ILogicalPlan> Inputs, Schema Schema) : ILogicalPlan
     {
         var indent = indentation ?? new Indentation();
 
-        var children = string.Join("", Inputs.Select((input, index) => index == 0 ? indent.Next(input) : indent.Repeat(input)));
+        var children = string.Join(string.Empty, Inputs.Select((input, index) => index == 0 ? indent.Next(input) : indent.Repeat(input)));
 
         return $"{this} {children}";
     }

@@ -329,4 +329,22 @@ public class PlanTests
     {
         Assert.Throws<InvalidOperationException>(() => new PhysicalPlanner().CreateInitialPlan(new Distinct(new TestPlan())));
     }
+
+    [Fact]
+    public async Task Context_Explains_Query_Plan()
+    {
+        const string sql = "EXPLAIN SELECT a, b FROM db order by a desc offset 5 limit 10";
+        var explainPlan = _context.BuildLogicalPlan(sql);
+        var explain = (ExplainExecution)Exec.BuildPhysicalPlan(explainPlan);
+
+        var batch = await explain.ExecuteAsync(new QueryContext()).FirstAsync();
+
+        var expectedSchema = new Schema([new QualifiedField("plan", ColumnDataType.Utf8)]);
+        Assert.Equal(expectedSchema, batch.Schema);
+
+        Assert.Equal("Limit: Skip 5, Limit 10", batch.Results[0].Values[0]);
+        Assert.Equal("  Sort:  db.a Desc", batch.Results[0].Values[1]);
+        Assert.Equal("    Projection: db.a, db.b ", batch.Results[0].Values[2]);
+        Assert.Equal("      Table Scan: db projection=(db.a, db.b, db.c)", batch.Results[0].Values[3]);
+    }
 }

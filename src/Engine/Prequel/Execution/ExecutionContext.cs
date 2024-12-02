@@ -4,6 +4,7 @@ using Prequel.Physical;
 using Prequel.Metrics;
 using Prequel.Data;
 using Prequel.Logical;
+using Prequel.Logical.Plans;
 
 namespace Prequel.Execution;
 
@@ -76,6 +77,7 @@ public class ExecutionContext
         var plan = ast.First() switch
         {
             Statement.Select select => LogicalExtensions.CreateQuery(select.Query, new PlannerContext(_tables)),
+            Statement.Explain explain => new Explain(LogicalExtensions.CreateQuery(explain.Statement.AsSelect(), new PlannerContext(_tables))),
             _ => throw new NotImplementedException()
         };
 

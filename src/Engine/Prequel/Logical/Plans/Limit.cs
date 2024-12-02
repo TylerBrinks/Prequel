@@ -23,6 +23,6 @@ public record Limit(ILogicalPlan Plan, int? Skip = 0, int? Fetch = 0) : ILogical
     public string ToStringIndented(Indentation? indentation = null)
     {
         var indent = indentation ?? new Indentation();
-        return $"Limit: Skip {Skip}, Limit {Fetch}{indent.Next(Plan)}";
+        return $"{this}{indent.Next(Plan)}";
     }
 }
