@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.Text.Json" Version="9.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
 	  <ProjectReference Include="..\..\IO\Prequel.Engine.IO.Azure\Prequel.Engine.IO.Azure.csproj" />
 	  <ProjectReference Include="..\Prequel.Engine.Caching\Prequel.Engine.Caching.csproj" />
   </ItemGroup>

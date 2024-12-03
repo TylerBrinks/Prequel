@@ -12,7 +12,7 @@ internal static class Results
             AnsiConsole.MarkupLine($"[green]{cellResult.Query}[/]");
             AnsiConsole.MarkupLine($"[yellow]{cellResult.Timing!.DurationMilliseconds}ms[/]");
 
-            var table = new Table();
+            var table = new Table().Border(TableBorder.Rounded).BorderColor(Color.Yellow);
             var columnsAdded = false;
 
             foreach (var batch in cellResult.Batches)
