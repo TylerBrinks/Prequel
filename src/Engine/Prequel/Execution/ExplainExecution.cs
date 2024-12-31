@@ -16,27 +16,34 @@ internal class ExplainExecution(Explain explain, IExecutionPlan? executionPlan) 
         var batch = new RecordBatch(Schema);
 
         var index = 0;
-        foreach (var step in logicalSteps)
+        await Task.Run(() =>
         {
-            var stepText = index++ == 0 ? "logical" : string.Empty;
-            batch.AddResult(0, stepText);
-            batch.AddResult(1, step);
-        }
+            foreach (var step in logicalSteps)
+            {
+                var stepText = index++ == 0 ? "logical" : string.Empty;
+                batch.AddResult(0, stepText);
+                batch.AddResult(1, step);
+            }
+        }, cancellation);
 
         yield return batch;
 
-        var physicalSteps = executionPlan.ToStringIndented().Split(Environment.NewLine);
+        var physicalSteps = executionPlan!.ToStringIndented().Split(Environment.NewLine);
         executionPlan.ToStringIndented();
 
         var batch2 = new RecordBatch(Schema);
 
         index = 0;
-        foreach (var step in physicalSteps)
+        await Task.Run(() =>
         {
-            var stepText = index++ == 0 ? "physical" : string.Empty;
-            batch2.AddResult(0, stepText);
-            batch2.AddResult(1, step);
-        }
+
+            foreach (var step in physicalSteps)
+            {
+                var stepText = index++ == 0 ? "physical" : string.Empty;
+                batch2.AddResult(0, stepText);
+                batch2.AddResult(1, step);
+            }
+        }, cancellation);
 
         yield return batch2;
     }

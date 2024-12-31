@@ -288,7 +288,7 @@ public static class AsyncAdapter
             if (_getFieldValueAsync != null)
             {
                 var method = _getFieldValueAsync.MakeGenericMethod(typeof(T));
-                return (Task<T>)method.Invoke(reader, [ordinal]);
+                return (Task<T>)method.Invoke(reader, [ordinal])!;
             }
             return Task.FromResult((T)reader.GetValue(ordinal));
         }
@@ -297,7 +297,7 @@ public static class AsyncAdapter
             if (_getFieldValueAsyncToken != null)
             {
                 var method = _getFieldValueAsyncToken.MakeGenericMethod(typeof(T));
-                return (Task<T>)method.Invoke(reader, [ordinal, token]);
+                return (Task<T>)method.Invoke(reader, [ordinal, token])!;
             }
             return Task.FromResult((T)reader.GetValue(ordinal));
         }

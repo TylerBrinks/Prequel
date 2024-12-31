@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using Prequel.Engine.Caching;
 using Prequel.Data;
 using Prequel.Execution;
@@ -22,7 +23,8 @@ public class FakePhysicalFileDataTable : PhysicalFileDataTable
         return new FakeTableExecution(Schema, projection);
     }
 
-    public override async IAsyncEnumerable<List<string?[]>> ReadAsync(List<int> indices, QueryContext queryContext, CancellationToken cancellation = default)
+    public override async IAsyncEnumerable<List<string?[]>> ReadAsync(List<int> indices, QueryContext queryContext, 
+        [EnumeratorCancellation] CancellationToken cancellation = default)
     {
         await Task.CompletedTask;
         yield return

@@ -72,5 +72,10 @@ internal record AggregateFunction(
 
         return equal;
     }
+
+    public override int GetHashCode()
+    {
+        return HashCode.Combine((int)FunctionType, Args, Distinct, Filter);
+    }
 }
 

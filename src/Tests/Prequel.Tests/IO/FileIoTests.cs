@@ -61,7 +61,7 @@ namespace Prequel.Tests.IO
         public async Task FileDataReader_Infers_Schema_Without_Query()
         {
             var table = new FakePhysicalFileDataTable("tablename", new QueryContext());
-            var reader = new FileQueryDataSourceReader("name", null, table);
+            var reader = new FileQueryDataSourceReader("name", "", table);
 
             var schema = await reader.QuerySchemaAsync();
 

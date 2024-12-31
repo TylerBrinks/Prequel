@@ -23,6 +23,7 @@ public class CsvDataWriter(IFileStream fileStream, CsvReadOptions? readOptions =
     public async ValueTask DisposeAsync()
     {
         _writer?.Dispose();
+        await ValueTask.CompletedTask;
     }
 
     /// <summary>

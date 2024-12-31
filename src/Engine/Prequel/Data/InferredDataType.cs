@@ -30,7 +30,12 @@ public partial class InferredDataType
     /// <param name="datetimeRegex">Optional date/time expression for date-based values</param>
     public void Update(string? value, Regex? datetimeRegex = null)
     {
-        if (value != null && value.StartsWith('"'))
+        if (value == null)
+        {
+            return;
+        }
+
+        if (value.StartsWith('"'))
         {
             DataType = ColumnDataType.Utf8;
             return;
